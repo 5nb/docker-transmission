@@ -5,7 +5,7 @@ ENV VER=2.94
 RUN \
  echo "**** install packages ****" && \
  apk add --no-cache git build-base transmission-daemon autoconf automake pkgconf curl-dev libevent-dev intltool libtool bsd-compat-headers && \
-	git clone https://github.com/ronggang/transmission-web-control.git /tmp/twc && \
+	git clone --branch v1.6.1-update1 https://github.com/ronggang/transmission-web-control.git /tmp/twc && \
 	cd /tmp/twc/src/ && \
 	tar zcf /tmp/twc.tar.gz * && \
 	mkdir transmission && cd transmission && \
